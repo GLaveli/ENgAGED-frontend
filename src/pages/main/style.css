@@ -1,0 +1,164 @@
+.container-cards {
+    background: rgb(224, 224, 224);
+
+}
+
+.band {
+    width                : 90%;
+    max-width            : 1240px;
+    margin               : 0 auto;
+    display              : grid;
+    grid-template-columns: 1fr;
+    grid-template-rows   : auto;
+    grid-gap             : 20px;
+}
+
+@media only screen and (min-width: 500px) {
+    .band {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container-cards {
+        background: rgb(224, 224, 224);
+
+        margin-bottom: -80px;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    .band {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .container-cards {
+        background: rgb(224, 224, 224);
+
+        margin-bottom: -80px;
+    }
+}
+
+
+
+.card {
+    background-image: linear-gradient(170deg, #ffffff, #FF3E0F);
+    text-decoration : none;
+    box-shadow      : 0 5px 3px rgba(0, 0, 0, 0.1);
+    display         : flex;
+    flex-direction  : column;
+    min-height      : 100%;
+    align-content   : center;
+    text-align      : center;
+    position        : relative;
+    transition      : all 0.1s ease-in;
+    border-radius   : 15% 45% 15% 15%
+}
+
+.card:hover {
+    top       : -10px;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card article {
+    padding: 20px;
+}
+
+.card .thumb {
+    padding-bottom     : 3px;
+    background-position: center;
+    background-color   : rgb(0, 0, 0);
+    width              : 100%;
+    position           : relative;
+    left               : 0%;
+    border             : 1px solid;
+    border-radius      : 15% 45% 15%
+}
+
+/* typography */
+.card h1 {
+    font-size: 20px;
+    margin   : 0;
+    color    : #333;
+}
+
+.card p {
+    flex: 1;
+    /* make p grow to fill available space*/
+    line-height: 2.4;
+
+}
+
+.card span {
+    font-size     : 12px;
+    font-weight   : bold;
+    color         : rgb(0, 0, 0);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    margin        : 2em 0 0 0;
+}
+
+.card article {
+    padding        : 20px;
+    flex           : 1;
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-between;
+}
+
+.title-card {
+    align-content: center;
+    text-align   : center;
+    margin-bottom: 15px;
+}
+
+.container-cards .actions {
+
+    display        : flex;
+    justify-content: space-around;
+    margin-top     : 30px;
+
+}
+
+.container-cards .actions button {
+    padding      : 10px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    border       : 0;
+    background   : rgb(235, 166, 63);
+    color        : #ffffff;
+    font-size    : 18px;
+    font-weight  : bold;
+    cursor       : pointer;
+
+}
+
+.container-cards .actions button[disabled] {
+    opacity: 0.5;
+    cursor : default;
+}
+
+.container-cards .actions button:hover {
+    opacity: 0.7;
+
+}
+
+.container-cards .actions button[disabled]:hover {
+    opacity: 0.7;
+    background   : rgb(255, 4, 4);
+    color        : #000000;
+}
+
+.container-cards .actions #btnPrev::before {
+    content: "<<< ";
+}
+
+.container-cards .actions #btnNext::after {
+    content: " >>>";
+}
+
+#pageCount {
+    font-size     : 18px;
+    font-weight   : bold;
+    color         : rgb(0, 0, 0);
+    letter-spacing: .05em;
+    margin        : 10px;
+}

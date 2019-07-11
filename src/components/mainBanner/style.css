@@ -1,0 +1,119 @@
+.container{
+  max-width:100%;
+	height:auto;
+  background-image   : url("https://i.imgur.com/uYU6p1z.jpg");
+  height             : 370px;
+  background-position: center;
+  background-repeat  : no-repeat;
+  background-size    : relative;
+  background-color   : black;
+  margin-bottom      : 0px;
+}
+
+/* Esse codigo permite que o banner não seja cortado o redimensionando*/
+@media only screen and (min-width: 2000px) {
+  .container{
+    max-width:100%;
+    height:auto;
+    height             : 370px;
+    background-image   : url("https://i.imgur.com/uYU6p1z.jpg");
+    background-position: center;
+    background-repeat  : no-repeat;
+    background-size    : 100%;
+    background-color   : black;
+    margin-bottom      : 0px;
+  }
+}
+
+
+.inner-container {
+  text-align: center;
+  position  : relative;
+  width     : 100%;
+  color     : #fff;
+  height    : auto;
+  /* Remova o Margin-top para anexar o banner com o menu*/
+  margin-top: 4px;
+  padding   : 100px;
+
+}
+
+.title {
+  font-size  : 60px;
+  font-family: BankGothic Lt BT;
+}
+
+#subtitulo {
+  font-size  : 30px;
+  font-family: BankGothic Lt BT;
+}
+
+
+.inner-container .title:before {
+  content    : "{";
+  color      : #FF3E0F;
+  font-family: BankGothic Lt BT;
+  font-size  : 66px;
+  padding-top: 0px;
+}
+
+.inner-container .title:after {
+  content    : "}";
+  color      : #FF3E0F;
+  font-family: BankGothic Lt BT;
+  font-size  : 66px;
+  padding-top: 0px;
+}
+
+/*-- Apenas um show!  Não toque neste codigo!*/
+
+#flip {
+  position         : absolute;
+  bottom           : 0px;
+  left             : 50%;
+  z-index          : 1;
+  display          : inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform        : translate(0, -50%);
+  color            : #fff;
+  font             : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing   : .1em;
+  text-decoration  : none;
+  transition       : opacity .3s;
+}
+
+
+
+#section06 a span {
+  position         : absolute;
+  top              : 0;
+  left             : 50%;
+  width            : 30px;
+  height           : 30px;
+  margin-left      : -12px;
+  border-left      : 3px solid #FF3E0F;
+  border-bottom    : 3px solid #fff;
+  -webkit-transform: rotateZ(-45deg);
+  transform        : rotateZ(-45deg);
+  -webkit-animation: sdb06 1.5s infinite;
+  animation        : sdb06 1.5s infinite;
+  box-sizing       : border-box;
+}
+
+
+@keyframes sdb06 {
+  0% {
+    transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+    opacity  : 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
+    opacity  : 0;
+  }
+
+}
