@@ -1,0 +1,122 @@
+#main-header {
+  height     : 50px;
+  background : #292D32;
+  font-weight: bold;
+  color      : aliceblue;
+  display    : flex;
+  align-items: center;
+  font-family: BankGothic Lt BT;
+}
+
+/*Menu!*/
+
+:root {
+  --navcover-z-index: 99;
+  --sidenav-z-index : 100;
+}
+
+.nav-cover {
+  position             : fixed;
+  z-index              : var(--navcover-z-index);
+  top                  : 0;
+  left                 : 0;
+  width                : 0;
+  height               : 100%;
+  /*   background-color: rgba(0, 0, 0, 0.5); */
+}
+
+.side-nav {
+  height: 100%;
+  width : 0;
+  /* to be set in js */
+  position   : fixed;
+  overflow-x : hidden;
+  z-index    : var(--sidenav-z-index);
+  top        : 0;
+  left       : 0;
+  background : #292D32;
+  padding-top: 3.5rem;
+  transition : 0.5s;
+}
+
+.side-nav a {
+  padding        : 1.5rem 0.2rem 0.5rem 1rem;
+  text-decoration: none;
+  font-size      : 1.5rem;
+  color          : #dd47b8;
+  background     : #d8d8d8;
+  display        : flex;
+  transition     : 0.53s;
+}
+
+.side-nav a:hover {
+  color     : #f1f1f1;
+  background: #dd47b8;
+}
+
+.side-nav .close-nav {
+  position  : absolute;
+  top       : 0rem;
+  right     : 1rem;
+  font-size : 2.2rem;
+  color     : #f1f1f1;
+  transition: 0.3s;
+  cursor    : pointer;
+}
+
+.side-nav .close-nav:hover {
+  color: #ffc6c6;
+
+}
+
+.site-wrapper {
+  transition: margin-left .5s;
+}
+
+
+.open-nav {
+  font-size: 35px;
+  margin-left: 20px;
+  position   : absolute;
+  top        : 0px;
+  cursor     : pointer;
+}
+
+.nav-img-login {
+  position: absolute;
+  right   : 0px;
+  height  : 80px;
+  width   : 100px;
+  cursor  : pointer;
+}
+
+.nav-img-login #img-banner {
+  height       : 50px;
+  display      : block;
+  position     : relative;
+  left         : 50%;
+  top          : 50%;
+  transform    : translate(-50%, -50%);
+  border-radius: 90% 90% 90% 90%;
+  box-shadow   : 0 0 5px rgb(255, 255, 255);
+}
+
+.nav-login {
+  font-size : 2rem;
+  position  : absolute;
+  right     : 100px;
+  height    : 50px;
+  width     : 100px;
+  background: #eb5454;
+  cursor    : pointer;
+}
+
+.nav-login #login-txt {
+  font-size: 20px;
+  display  : block;
+  position : relative;
+  left     : 70%;
+  top      : 45%;
+  transform: translate(-50%, -50%);
+
+}

@@ -102,33 +102,34 @@ export default class Main extends Component {
                     <br />
                 </div>
 
-                <h1 className="title-card-project">Ultimos projetos</h1>
+                <div className="container-cardsProject ">
+                    <h1 className="title-card-project">Ultimos projetos</h1>
 
-                <div className="bandSpec" >
+                    <div className="bandSpec" >
 
-                    {projects.map(project => (
-                        <div className="card-body" key={project._id}>
+                        {projects.map(project => (
+                            <div className="card-body" key={project._id}>
 
-                            <Link to={`/project/${project._id}`} className="card-project">
-                                <img alt="img-cardSpec" src="https://i.imgur.com/WGVuA2M.png" className="thumbSpec" />
-                                <article>
-                                    <h1>{project.name}</h1>
-                                    <p>{project.email}</p>
-                                    <span>{project.gitURL}</span>
-                                </article>
-                            </Link>
+                                <Link to={`/project/${project._id}`} className="card-project">
+                                    <img alt="img-cardSpec" src="https://i.imgur.com/WGVuA2M.png" className="thumbSpec" />
+                                    <article>
+                                        <h1>{project.name}</h1>
+                                        <p>{project.email}</p>
+                                        <span>{project.gitURL}</span>
+                                    </article>
+                                </Link>
 
-                        </div>
-                    ))}
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="actions">
+                        <button id="btnPrev" disabled={page === 1} onClick={this.prevPage}>Anterior</button>
+                        <div id="pageCount" >Pagina {projectInfo.page} de {projectInfo.totalPages}</div>
+                        <button id="btnNext" disabled={page === projectInfo.totalPages} onClick={this.nextPage}>Proximo</button>
+                    </div>
 
                 </div>
-
-                <div className="actions">
-                    <button id="btnPrev" disabled={page === 1} onClick={this.prevPage}>Anterior</button>
-                    <div id="pageCount" >Pagina {projectInfo.page} de {projectInfo.totalPages}</div>
-                    <button id="btnNext" disabled={page === projectInfo.totalPages} onClick={this.nextPage}>Proximo</button>
-                </div>
-
             </div>
 
         );

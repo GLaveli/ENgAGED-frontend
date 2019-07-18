@@ -1,6 +1,6 @@
 /*--------------------------------------------------------------*/
 
-/*----------------------Container Superior!---------------------*/
+/*---------------Container Superior (Banner e logo)-------------*/
 
 .container {
     max-width          : 100%;
@@ -123,23 +123,8 @@
 
 }
 
-
-/*--------------------------------------------------------------*/
-
-/*----------------------Container Central!---------------------*/
-
-/*--------------------------------------------------------------*/
-
-/*-----------------------Container Cards------------------------*/
-
-
-/*Container Card Specs*/
-
-.container-cardsSpec {
-    background: rgb(0, 109, 199);
-
-}
-
+/*Estas configs server para as duas fileiras de cards abaixo nao alterar*/
+/*----------------------------Global Seting--------------------------*/
 .bandSpec {
     width                : 90%;
     max-width            : 1000px;
@@ -150,8 +135,31 @@
     grid-gap             : 20px;
 }
 
+@media only screen and (min-width: 500px) {
+    .bandSpec {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    .bandSpec {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+/*----------------------------Global Seting--------------------------*/
 
 
+/*--------------------------------------------------------------*/
+
+/*----------------------Container Central!---------------------*/
+
+.container-cardsSpec {
+    background: rgb(0, 109, 199);
+
+}
+
+/*cardSpec pode ser removido, seria uma opcao!*/
 .cardSpec {
     background-image: linear-gradient(180deg, #505050, #505050, #505050, rgb(174, 28, 241));
     text-decoration : none;
@@ -178,19 +186,6 @@
     border-radius      : 10% 10% 40% 40%
 }
 
-/* typography */
-.cardSpec h1 {
-    font-size: 20px;
-    margin   : 0;
-    color    : #333;
-}
-
-.cardSpec p {
-    flex: 1;
-    /* make p grow to fill available space*/
-    line-height: 2.4;
-
-}
 
 .cardSpec span {
     font-size     : 12px;
@@ -226,34 +221,9 @@
 
 /*--------------------------------------------------------------*/
 
-/*-----------------------Container Cards------------------------*/
+.container-cardsProject {
+    background: rgb(236, 236, 236);
 
-
-.container-cardsSpec {
-    background: rgb(0, 109, 199);
-
-}
-
-.bandSpec {
-    width                : 90%;
-    max-width            : 1000px;
-    margin               : 0 auto;
-    display              : grid;
-    grid-template-columns: 1fr;
-    grid-template-rows   : auto;
-    grid-gap             : 20px;
-}
-
-@media only screen and (min-width: 500px) {
-    .bandSpec {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media only screen and (min-width: 850px) {
-    .bandSpec {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
 }
 
 .card-project {
@@ -286,32 +256,33 @@
 .card-project h1 {
     font-size: 20px;
     margin   : 0;
-    color    : #333;
+    color    : rgb(255, 255, 255);
 }
 
 .card-project p {
-    flex: 1;
+    color: rgb(255, 255, 255);
+    flex : 1;
     /* make p grow to fill available space*/
-    line-height: 2.4;
+    line-height: 2;
 
+}
+
+.card-project article {
+    padding        : 10px;
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-between;
 }
 
 .card-project span {
     font-size     : 12px;
     font-weight   : bold;
-    color         : rgb(0, 0, 0);
+    color         : rgb(255, 255, 255);
     text-transform: uppercase;
     letter-spacing: .05em;
     margin        : 2em 0 0 0;
 }
 
-.card-project article {
-    padding        : 20px;
-    color          : #fff;
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-between;
-}
 
 .title-card-project {
     align-content: center;
@@ -327,7 +298,11 @@
     box-shadow: 0 15px 10px rgba(0, 0, 0, 0.2);
 }
 
-/*Botoes*/
+/*--------------------------------------------------------------*/
+
+/*--------------------Container Action buttons!-----------------*/
+
+/*--------------------------------------------------------------*/
 
 .actions {
 
