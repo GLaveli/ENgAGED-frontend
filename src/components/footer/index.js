@@ -5,17 +5,21 @@ let today = new Date().toLocaleDateString().split("/");
 
 const Footer = () => (
 
-    <div id="main-footer">
-        <footer className="footer-basic-centered">
+    <div className="footer-container">
 
-            <p className="footer-company-motto">ENgAGED</p>
+        <footer className="footer-distributed">
 
-            <p className="footer-company-name">
-                &copy; {today[2]} Todos os direitos reservados <br /> Template made whith <strong className="heart">♥</strong> by G.Laveli
-            </p>
+            <div className="footer-content">
+                <p className="footer-logo">ENgAGED</p>
+                <p className="footer-content"> &copy; {today[2]} Todos os direitos reservados
+                <br />
+                Template made with <strong className="heart"> ♥ </strong> by G.Laveli </p>
+            </div>
 
         </footer>
+
     </div>
+
 );
 
 export default Footer;

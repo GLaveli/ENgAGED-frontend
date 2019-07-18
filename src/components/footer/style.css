@@ -1,48 +1,53 @@
-.footer-basic-centered {
-	background-color: #292c2f;
-	box-shadow      : 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-	box-sizing      : border-box;
-	width           : 100%;
-	text-align      : center;
-	font            : normal 18px sans-serif;
-	padding         : 34px;
-	margin-top      : 80px;
+.footer-container p {
+    color: #ffffff;
 }
 
-.footer-basic-centered .footer-company-motto {
-	color      : #ffffff;
-	font-size  : 26px;
-	margin     : 0;
-	font-family: BankGothic Lt BT;
-	font-weight: bold;
+.footer-distributed {
+    background-color: #292D32;
+    box-shadow      : 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing      : border-box;
+    width           : 100%;
+    text-align      : left;
+    font            : normal 16px sans-serif;
+    padding         : 45px 50px;
+    margin-top      : 80px;
 
 }
 
-.footer-basic-centered .footer-company-name {
-	color    : #cecece;
-	font-size: 14px;
-	margin   : 0;
+.footer-content {
+    text-align: center;
 }
 
-.footer-basic-centered .footer-company-motto:before {
-	content    : "{";
-	color      : #FF3E0F;
-	font-family: BankGothic Lt BT;
-	font-size  : 24px;
-	padding-top: 0px;
+.heart {
+    color    : rgb(255, 51, 0);
+    font-size: 22 px;
 }
 
-.footer-basic-centered .footer-company-motto::after {
-	content    : "}";
-	color      : #FF3E0F;
-	font-family: BankGothic Lt BT;
-	font-size  : 36px;
-	padding-top: 0px;
+.footer-logo {
+    margin-bottom  : 15px;
+    font-size      : 20px;
+    font-weight    : bold;
+    color          : aliceblue;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    font-family    : BankGothic Lt BT;
 }
 
-.footer-basic-centered .footer-company-name .heart {
-	color    : #ca1e1e;
-	font-size: 20px;
+.footer-logo:before {
+    content    : "{";
+    color      : #FF3E0F;
+    font-family: BankGothic Lt BT;
+    font-size  : 36px;
+    padding-top: 0px;
+}
+
+.footer-logo:after {
+    content    : "}";
+    color      : #FF3E0F;
+    font-family: BankGothic Lt BT;
+    font-size  : 36px;
+    padding-top: 0px;
 }
 
 
@@ -50,39 +55,16 @@
 
 @media (max-width: 600px) {
 
-	.footer-basic-centered {
-		background-color: #292c2f;
-		box-shadow      : 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-		box-sizing      : border-box;
-		width           : 100%;
-		text-align      : center;
-		font            : normal 18px sans-serif;
-		margin-top      : 80px;
-	}
+    .footer-content {
+        text-align: center;
+    }
 
-	.footer-basic-centered {
-		padding: 35px;
-	}
+    .footer-distributed .footer-content {
+        float : none;
+        margin: 0 auto 20px;
+    }
 
-	.footer-basic-centered .footer-company-motto {
-		color      : #ffffff;
-		font-size  : 24px;
-		margin     : 0;
-		font-weight: bold;
-		font-family: BankGothic Lt BT;
-	}
-
-	.footer-basic-centered .footer-company-name {
-		font-size: 12px;
-
-	}
-
-	.footer-basic-centered .footer-links {
-		font-size: 14px;
-		padding  : 25px 0 20px;
-	}
-
-	.footer-basic-centered .footer-links a {
-		line-height: 1.8;
-	}
+    .footer-distributed footer-content {
+        line-height: 1.8;
+    }
 }

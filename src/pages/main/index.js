@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import api from '../../services/api'
+import api from '../../services/api';
+import { Link } from 'react-router-dom';
 
 import './style.css'
 
@@ -48,32 +49,88 @@ export default class Main extends Component {
         const { projects, page, projectInfo } = this.state;
 
         return (
-            <div className="container-cards">
 
-                <h1 className="title-card">Ultimos projetos</h1>
+            <div className="ContainerAllCards">
 
-                <div className="band">
+                <div className="container">
+                    <div className="inner-container">
+                        <section id="section06" className="demo">
+
+                            <h1 className="title">ENgAGED</h1>
+                            <p id="subtitulo">Teste</p>
+                            <a id="flip" href="#section07">
+                                <span></span></a>
+
+                        </section>
+                    </div>
+                </div>
+
+                <div className="container-cardsSpec">
+                    <h1 className="title-cardSpec"> Um pouco sobre o sistema </h1>
+
+                    <div className="bandSpec">
+
+                        <div className="cardSpec">
+                            <img alt="img-cardSpec" src="https://i.imgur.com/aF0iAZC.jpg" className="thumbSpec" />
+                            <article>
+                                Desenvolva seus projetos em conjunto
+                        </article>
+                        </div>
+
+                        <div className="cardSpec">
+                            <img alt="img-cardSpec" src="https://i.imgur.com/Dai8wk4.jpg" className="thumbSpec" />
+                            <article>
+                                Crie uma equipe e compartilhe seus projetos
+                        </article>
+                        </div>
+
+                        <div className="cardSpec">
+                            <img alt="img-cardSpec" src="https://i.imgur.com/cyxLgGo.jpg" className="thumbSpec" />
+                            <article>
+                                Organize e acompanhe o desenvolvimento
+                        </article>
+                        </div>
+
+                        <div className="cardSpec">
+                            <img alt="img-cardSpec" src="https://i.imgur.com/DHk0DkT.jpg" className="thumbSpec" />
+                            <article>
+                                Publique de forma privada ou publica
+                        </article>
+                        </div>
+
+                    </div>
+                    <br />
+                </div>
+
+                <h1 className="title-card-project">Ultimos projetos</h1>
+
+                <div className="bandSpec" >
+
                     {projects.map(project => (
-                        <div className="item-1" key={project._id}>
-                            <a href=" " className="card">
-                                <img alt="img-card" src="https://wallpapercave.com/wp/nkvkU5T.jpg" className="thumb" />
+                        <div className="card-body" key={project._id}>
+
+                            <Link to={`/project/${project._id}`} className="card-project">
+                                <img alt="img-cardSpec" src="https://i.imgur.com/WGVuA2M.png" className="thumbSpec" />
                                 <article>
-                                    <h1>{project.projects}</h1>
+                                    <h1>{project.name}</h1>
                                     <p>{project.email}</p>
-                                    <span>{project.name}</span>
+                                    <span>{project.gitURL}</span>
                                 </article>
-                            </a>
+                            </Link>
+
                         </div>
                     ))}
+
                 </div>
 
                 <div className="actions">
                     <button id="btnPrev" disabled={page === 1} onClick={this.prevPage}>Anterior</button>
-                   <div id="pageCount" >Pagina {projectInfo.page} de {projectInfo.totalPages}</div>
+                    <div id="pageCount" >Pagina {projectInfo.page} de {projectInfo.totalPages}</div>
                     <button id="btnNext" disabled={page === projectInfo.totalPages} onClick={this.nextPage}>Proximo</button>
                 </div>
 
             </div>
+
         );
     }
 };
