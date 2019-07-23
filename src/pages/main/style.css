@@ -3,136 +3,130 @@
 /*---------------Container Superior (Banner e logo)-------------*/
 
 .container {
-    max-width          : 100%;
-    height             : auto;
-    background-image   : url("https://i.imgur.com/uYU6p1z.jpg");
-    height             : 370px;
+    max-width: 100%;
+    height: auto;
+    background-image: url("https://i.imgur.com/uYU6p1z.jpg");
+    height: 370px;
     background-position: center;
-    background-repeat  : no-repeat;
-    background-size    : relative;
-    background-color   : black;
+    background-repeat: no-repeat;
+    background-size: relative;
+    background-color: black;
 }
 
 /* Esse codigo permite que o banner não seja cortado o redimensionando*/
+
 @media only screen and (min-width: 2000px) {
     .container {
-        max-width          : 100%;
-        height             : auto;
-        height             : 370px;
-        background-image   : url("https://i.imgur.com/uYU6p1z.jpg");
+        max-width: 100%;
+        height: auto;
+        height: 370px;
+        background-image: url("https://i.imgur.com/uYU6p1z.jpg");
         background-position: center;
-        background-repeat  : no-repeat;
-        background-size    : 100%;
-        background-color   : black;
-        margin-bottom      : 0px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: black;
+        margin-bottom: 0px;
     }
 }
 
-
 .inner-container {
     text-align: center;
-    position  : relative;
-    width     : 100%;
-    color     : #fff;
-    height    : auto;
+    position: relative;
+    width: 100%;
+    color: #fff;
+    height: auto;
     /* Remova o Margin-top para anexar o banner com o menu*/
     margin-top: 4px;
-    padding   : 50px;
-
+    padding: 50px;
 }
 
-
 .title {
-    font-size  : 60px;
+    font-size: 60px;
     font-family: BankGothic Lt BT;
     margin-left: -10px;
 }
 
 #subtitulo {
-    font-size  : 30px;
+    font-size: 30px;
     font-family: BankGothic Lt BT;
 }
 
-
 .inner-container .title:before {
-    content    : "{";
-    color      : #FF3E0F;
+    content: "{";
+    color: #ee6000;
     font-family: BankGothic Lt BT;
-    font-size  : 66px;
+    font-size: 66px;
     padding-top: 0px;
 }
 
 .inner-container .title:after {
-    content    : "}";
-    color      : #FF3E0F;
+    content: "}";
+    color: #ee6000;
     font-family: BankGothic Lt BT;
-    font-size  : 66px;
+    font-size: 66px;
     padding-top: 0px;
 }
 
 /*-- Apenas um show!  Não toque neste codigo!*/
 
 #flip {
-    position         : absolute;
-    bottom           : 0px;
-    left             : 50%;
-    z-index          : 1;
-    display          : inline-block;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    z-index: 1;
+    display: inline-block;
     -webkit-transform: translate(0, -50%);
-    transform        : translate(0, -50%);
-    color            : #fff;
-    font             : normal 400 20px/1 'Josefin Sans', sans-serif;
-    letter-spacing   : .1em;
-    text-decoration  : none;
-    transition       : opacity .3s;
+    transform: translate(0, -50%);
+    color: #fff;
+    font: normal 400 20px/1 'Josefin Sans', sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
 }
-
-
 
 #section06 a span {
-    position         : absolute;
-    top              : 0;
-    left             : 50%;
-    width            : 30px;
-    height           : 30px;
-    margin-left      : -12px;
-    border-left      : 3px solid #FF3E0F;
-    border-bottom    : 3px solid #fff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin-left: -12px;
+    border-left: 3px solid #ee6000;
+    border-bottom: 3px solid #fff;
     -webkit-transform: rotateZ(-45deg);
-    transform        : rotateZ(-45deg);
+    transform: rotateZ(-45deg);
     -webkit-animation: sdb06 1.5s infinite;
-    animation        : sdb06 1.5s infinite;
-    box-sizing       : border-box;
+    animation: sdb06 1.5s infinite;
+    box-sizing: border-box;
+    cursor: default;
 }
-
 
 @keyframes sdb06 {
     0% {
         transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
-        opacity  : 0;
+        opacity: 0;
     }
-
     50% {
         opacity: 1;
     }
-
     100% {
         transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
-        opacity  : 0;
+        opacity: 0;
     }
-
 }
 
 /*Estas configs server para as duas fileiras de cards abaixo nao alterar*/
+
 /*----------------------------Global Seting--------------------------*/
+
 .bandSpec {
-    width                : 90%;
-    max-width            : 1000px;
-    margin               : 0 auto;
-    display              : grid;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows   : auto;
-    grid-gap             : 20px;
+    grid-template-rows: auto;
+    grid-gap: 20px;
 }
 
 @media only screen and (min-width: 500px) {
@@ -149,71 +143,60 @@
 
 /*----------------------------Global Seting--------------------------*/
 
-
 /*--------------------------------------------------------------*/
 
 /*----------------------Container Central!---------------------*/
 
 .container-cardsSpec {
     background: rgb(0, 109, 199);
-
 }
 
 /*cardSpec pode ser removido, seria uma opcao!*/
-.cardSpec {
-    background-image: linear-gradient(180deg, #505050, #505050, #505050, rgb(174, 28, 241));
-    text-decoration : none;
-    box-shadow      : 0 5px 3px rgba(0, 0, 0, 0.1);
-    display         : flex;
-    flex-direction  : column;
-    min-height      : 100%;
-    align-content   : center;
-    text-align      : center;
-    position        : relative;
-    transition      : all 0.1s ease-in;
-    border-radius   : 40% 40% 10% 10%
-}
 
-
-.cardSpec .thumbSpec {
-    padding-bottom     : 3px;
-    background-position: center;
-    background-color   : #505050;
-    width              : 100%;
-    position           : relative;
-    left               : 0%;
-    border             : 2px solid;
-    border-radius      : 10% 10% 40% 40%
-}
-
-
-.cardSpec span {
-    font-size     : 12px;
-    font-weight   : bold;
-    color         : rgb(0, 0, 0);
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    margin        : 2em 0 0 0;
-}
-
-.cardSpec article {
-    padding        : 20px;
-    color          : #fff;
-    padding        : 20px;
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-between;
-}
 
 .title-cardSpec {
     align-content: center;
-    text-align   : center;
-    font-family  : Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
     margin-bottom: 15px;
-    color        : #ffff;
+    color: #ffff;
 }
 
 
+.cardSpec {
+    background-image: linear-gradient(180deg, #505050, #505050, #505050, rgb(174, 28, 241));
+    text-decoration: none;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    align-content: center;
+    text-align: center;
+    position: relative;
+    transition: all 0.1s ease-in;
+    border-radius: 40% 40% 10% 10%
+}
+
+.cardSpec .thumbSpec {
+    padding-bottom: 3px;
+    background-position: center;
+    background-color: #505050;
+    width: 100%;
+    position: relative;
+    left: 0%;
+    border: 2px solid;
+    border-radius: 10% 10% 40% 40%
+}
+
+.cardSpec article {
+    padding: 20px;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 /*--------------------------------------------------------------*/
 
@@ -223,78 +206,74 @@
 
 .container-cardsProject {
     background: rgb(236, 236, 236);
-
 }
 
 .card-project {
     background-image: linear-gradient(180deg, #505050, #505050, #505050, rgb(174, 28, 241));
-    text-decoration : none;
-    box-shadow      : 0 5px 3px rgba(0, 0, 0, 0.1);
-    display         : flex;
-    flex-direction  : column;
-    min-height      : 100%;
-    align-content   : center;
-    text-align      : center;
-    position        : relative;
-    transition      : all 0.1s ease-in;
-    border-radius   : 40% 40% 10% 10%
+    text-decoration: none;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    align-content: center;
+    text-align: center;
+    position: relative;
+    transition: all 0.1s ease-in;
+    border-radius: 40% 40% 10% 10%
 }
 
-
-.card-project .thumbSpec {
-    padding-bottom     : 3px;
+.card-project .thumbProject {
+    padding-bottom: 3px;
     background-position: center;
-    background-color   : #505050;
-    width              : 100%;
-    position           : relative;
-    left               : 0%;
-    border             : 2px solid;
-    border-radius      : 10% 10% 40% 40%
+    background-color: #505050;
+    width: 100%;
+    position: relative;
+    left: 0%;
+    border: 2px solid;
+    border-radius: 10% 10% 40% 40%
 }
 
 /* typography */
+
 .card-project h1 {
     font-size: 20px;
-    margin   : 0;
-    color    : rgb(255, 255, 255);
+    margin: 0;
+    color: rgb(255, 255, 255);
 }
 
 .card-project p {
     color: rgb(255, 255, 255);
-    flex : 1;
+    flex: 1;
     /* make p grow to fill available space*/
     line-height: 2;
-
 }
 
 .card-project article {
-    padding        : 10px;
-    display        : flex;
-    flex-direction : column;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 .card-project span {
-    font-size     : 12px;
-    font-weight   : bold;
-    color         : rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     letter-spacing: .05em;
-    margin        : 2em 0 0 0;
+    margin: 2em 0 0 0;
 }
-
 
 .title-card-project {
     align-content: center;
-    text-align   : center;
-    font-family  : Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 15px;
-    color        : rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
 }
 
-
 .card-project:hover {
-    top       : -10px;
+    top: -10px;
     box-shadow: 0 15px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -305,40 +284,37 @@
 /*--------------------------------------------------------------*/
 
 .actions {
-
-    display        : flex;
+    display: flex;
     justify-content: space-around;
-    margin-top     : 30px;
-
+    margin-top: 30px;
 }
 
 .actions button {
-    padding      : 10px;
+    padding: 10px;
     margin-bottom: 25px;
     border-radius: 5px;
-    border       : 0;
-    background   : rgb(235, 166, 63);
-    color        : #ffffff;
-    font-size    : 18px;
-    font-weight  : bold;
-    cursor       : pointer;
-
+    border: 0;
+    background: #ee6000;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .actions button[disabled] {
     opacity: 0.5;
-    cursor : default;
+    cursor: default;
 }
 
 .actions button:hover {
     opacity: 0.7;
-
 }
 
 .actions button[disabled]:hover {
-    opacity   : 0.7;
-    background: rgb(255, 4, 4);
-    color     : #000000;
+    opacity: .2;
+    background: rgb(87, 87, 87);
+    color: #ffffff;
+    cursor: not-allowed;
 }
 
 .actions #btnPrev::before {
@@ -350,9 +326,9 @@
 }
 
 #pageCount {
-    font-size     : 18px;
-    font-weight   : bold;
-    color         : rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
     letter-spacing: .05em;
-    margin        : 10px;
+    margin: 10px;
 }

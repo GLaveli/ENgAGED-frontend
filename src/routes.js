@@ -12,8 +12,9 @@ const Routes = () => (
         <Switch>
             <Route exact path='/' component={Main} />
             <Route path='/project/:id' component={Project} />
-            <Route path='*' component={p404} />
+            <Route path='/*' component={p404} />
         </Switch>
+       
     </BrowserRouter>
 
 );

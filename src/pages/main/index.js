@@ -54,19 +54,23 @@ export default class Main extends Component {
 
                 <div className="container">
                     <div className="inner-container">
+
                         <section id="section06" className="demo">
 
                             <h1 className="title">ENgAGED</h1>
                             <p id="subtitulo">Teste</p>
-                            <a id="flip" href="#section07">
+                            <a id="flip" href=" ">
                                 <span></span></a>
 
                         </section>
+
                     </div>
                 </div>
 
                 <div className="container-cardsSpec">
-                    <h1 className="title-cardSpec"> Um pouco sobre o sistema </h1>
+
+                    <br id="space" />
+                    <h1 className="title-cardSpec"> Conheça o sistema </h1>
 
                     <div className="bandSpec">
 
@@ -99,10 +103,11 @@ export default class Main extends Component {
                         </div>
 
                     </div>
-                    <br />
+                    <br id="space" />
                 </div>
 
                 <div className="container-cardsProject ">
+                    <br id="space" />
                     <h1 className="title-card-project">Ultimos projetos</h1>
 
                     <div className="bandSpec" >
@@ -111,7 +116,7 @@ export default class Main extends Component {
                             <div className="card-body" key={project._id}>
 
                                 <Link to={`/project/${project._id}`} className="card-project">
-                                    <img alt="img-cardSpec" src="https://i.imgur.com/WGVuA2M.png" className="thumbSpec" />
+                                    <img className="thumbProject" alt="img-cardSpec" src="https://i.imgur.com/WGVuA2M.png" />
                                     <article>
                                         <h1>{project.name}</h1>
                                         <p>{project.email}</p>
@@ -130,6 +135,7 @@ export default class Main extends Component {
                     </div>
 
                 </div>
+
             </div>
 
         );
