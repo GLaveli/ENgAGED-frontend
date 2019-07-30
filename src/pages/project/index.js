@@ -19,13 +19,8 @@ export default class Product extends Component {
 
         return (
             <div className="projectInfo" align="center">
-                <h1>{project.name}</h1>
-                <p>{project.sobrenome}</p>
+                <h1>{project.nome}</h1>
                 <p>{project.email}</p>
-                <p>{project.apelido}</p>
-                <p>{project.cpf}</p>
-                <p>{project.gitURL}</p>
-                <p>{project.projects}</p>
             </div>
         );
     }

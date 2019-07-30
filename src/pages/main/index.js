@@ -39,7 +39,7 @@ export default class Main extends Component {
         const { page, projectInfo } = this.state;
 
         if (page === projectInfo.pages) return;
-        console.log(projectInfo.pages);
+        console.log("" + projectInfo.pages);
         const pageNumber = page + 1;
 
         this.loadProducts(pageNumber);
@@ -118,9 +118,9 @@ export default class Main extends Component {
                                 <Link to={`/project/${project._id}`} className="card-project">
                                     <img className="thumbProject" alt="img-cardSpec" src="https://i.imgur.com/WGVuA2M.png" />
                                     <article>
-                                        <h1>{project.name}</h1>
+                                        <h1>{project.nome}</h1>
                                         <p>{project.email}</p>
-                                        <span>{project.gitURL}</span>
+                                        <span>{project.giturl}</span>
                                     </article>
                                 </Link>
 
