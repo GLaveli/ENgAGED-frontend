@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import api from '../../services/api';
+import CardInfo from '../../components/CardInfo';
+
+require('./style.css');
 
 export default class Product extends Component {
     state = {
@@ -7,9 +10,10 @@ export default class Product extends Component {
     };
 
     async componentDidMount() {
+
         const { id } = this.props.match.params;
 
-        const response = await api.get(`/users/${id} `);
+        const response = await api.get(`/auth/users/${id} `);
 
         this.setState({ project: response.data });
     }
@@ -18,10 +22,11 @@ export default class Product extends Component {
         const { project } = this.state;
 
         return (
-            <div className="projectInfo" align="center">
-                <h1>{project.nome}</h1>
-                <p>{project.email}</p>
-            </div>
+
+            <>
+                <CardInfo infos={project} />
+            </>
+
         );
     }
 }

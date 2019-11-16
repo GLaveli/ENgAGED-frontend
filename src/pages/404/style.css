@@ -13,7 +13,7 @@
 }
 
 .notfound {
-  max-width: 410px;
+  max-width: 440px;
   width: 100%;
   text-align: center;
 }
@@ -32,7 +32,7 @@
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  background: url('../../img/bg.jpg') no-repeat;
+  background: url('https://wallpapercave.com/wp/Z0qsiGu.jpg') no-repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: cover;
@@ -99,7 +99,7 @@
   /* Keeps the content on a single line */
   margin: 0 auto;
   /* Adjust as needed */
-  animation: typing 3.5s steps(90, end), blink-caret .5s step-end infinite;
+  animation: typing 2.5s steps(90, end), blink-caret .5s step-end infinite;
 }
 
 /* The typing effect */

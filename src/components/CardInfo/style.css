@@ -1,0 +1,95 @@
+.body-info .card {
+    width: 450px;
+    margin: 60px auto 60px;
+    background-color: #fff;
+    box-shadow: 0 3px 30px rgba(0, 0, 0, .54);
+    color: #444;
+    text-align: center;
+    font-size: 16px;
+}
+
+.body-info .card-header {
+    position: relative;
+    height: 48px;
+}
+
+.body-info .card-header .profile-img {
+    width: 96px;
+    height: 96px;
+    border-radius: 1000px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 6px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+}
+
+.body-info .card-body {
+    padding: 10px 40px;
+}
+
+.body-info .card-body .full-name {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 10px 0 0;
+}
+
+.body-info .card-body .username {
+    font-size: 13px;
+    color: #777;
+    margin: 5px 0 0;
+}
+
+.body-info .card-body .city {
+    font-weight: 500;
+    margin: 10px 0 0;
+}
+
+.body-info .card-body .desc {
+    line-height: 24px;
+}
+
+.body-info .card .social-icon {
+    font-size: 18px;
+    margin: 0 7px;
+}
+
+.body-info .card .social-icon.github {
+    color: #3b5999;
+}
+
+.body-info .card .social-icon.facebook {
+    color: #3b5999;
+}
+
+.body-info .card .social-icon.twitter {
+    color: #55acee;
+}
+
+.body-info .card .social-icon.tumblr {
+    color: #34465d;
+}
+
+.body-info .card .social-icon.youtube {
+    color: #cd201f;
+}
+
+.body-info .card .social-icon.linkedin {
+    color: #0077b5;
+}
+
+.body-info .card .social-icon.google-plus {
+    color: #dd4b39;
+}
+
+.body-info .card-footer {
+    display: table;
+    width: 100%;
+    border-top: 1px solid #e6e6e6;
+}
+
+.body-info .card-footer .col {
+    display: table-cell;
+    padding: 5px 10px;
+}

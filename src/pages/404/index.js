@@ -14,9 +14,9 @@ export default class ErrorNotFound extends Component {
                     </div>
 
                     <div class="typewriter">
-                        <h2>Page not found</h2>
-                        <p>The page you are looking for might have been removed had its name changed or is temporarily unavailable.</p>
-                        <a href="index.html">Home</a>
+                        <h2>Pagina não encontrada =/</h2>
+                        <p>A página que você está procurando pode ter sido removida!</p>
+                        <a href="index.html">Voltar para o inicio</a>
                     </div>
 
                 </div>

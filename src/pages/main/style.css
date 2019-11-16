@@ -81,6 +81,7 @@
     font: normal 400 20px/1 'Josefin Sans', sans-serif;
     letter-spacing: .1em;
     text-decoration: none;
+    pointer-events: none;
     transition: opacity .3s;
 }
 
@@ -153,7 +154,6 @@
 
 /*cardSpec pode ser removido, seria uma opcao!*/
 
-
 .title-cardSpec {
     align-content: center;
     text-align: center;
@@ -162,7 +162,6 @@
     margin-bottom: 15px;
     color: #ffff;
 }
-
 
 .cardSpec {
     background-image: linear-gradient(180deg, #505050, #505050, #505050, rgb(174, 28, 241));
