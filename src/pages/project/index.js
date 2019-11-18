@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import api from '../../services/api';
-import CardInfo from '../../components/CardInfo';
+import CardInfo from '../../components/CardUserInfo';
 
-require('./style.css');
+import './style.css';
 
 export default class Product extends Component {
     state = {
@@ -13,7 +13,7 @@ export default class Product extends Component {
 
         const { id } = this.props.match.params;
 
-        const response = await api.get(`/auth/users/${id} `);
+        const response = await api.get(`/auth/users/${id} `);        
 
         this.setState({ project: response.data });
     }

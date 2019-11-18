@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './style.css'
+import './style.css';
 
 export default class ErrorNotFound extends Component {
 
@@ -16,7 +16,7 @@ export default class ErrorNotFound extends Component {
                     <div class="typewriter">
                         <h2>Pagina não encontrada =/</h2>
                         <p>A página que você está procurando pode ter sido removida!</p>
-                        <a href="index.html">Voltar para o inicio</a>
+                        <a href="/">Voltar para o inicio</a>
                     </div>
 
                 </div>

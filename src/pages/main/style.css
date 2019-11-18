@@ -2,7 +2,7 @@
 
 /*---------------Container Superior (Banner e logo)-------------*/
 
-.container {
+.ContainerAllCards .container-card-index {
     max-width: 100%;
     height: auto;
     background-image: url("https://i.imgur.com/uYU6p1z.jpg");
@@ -16,7 +16,7 @@
 /* Esse codigo permite que o banner não seja cortado o redimensionando*/
 
 @media only screen and (min-width: 2000px) {
-    .container {
+    .ContainerAllCards .container-card-index {
         max-width: 100%;
         height: auto;
         height: 370px;
@@ -29,7 +29,7 @@
     }
 }
 
-.inner-container {
+.ContainerAllCards .inner-container {
     text-align: center;
     position: relative;
     width: 100%;
@@ -40,18 +40,18 @@
     padding: 50px;
 }
 
-.title {
+.ContainerAllCards .title {
     font-size: 60px;
     font-family: BankGothic Lt BT;
     margin-left: -10px;
 }
 
-#subtitulo {
-    font-size: 30px;
+.ContainerAllCards #subtitulo {
+    font-size: 24px;
     font-family: BankGothic Lt BT;
 }
 
-.inner-container .title:before {
+.ContainerAllCards .inner-container .title:before {
     content: "{";
     color: #ee6000;
     font-family: BankGothic Lt BT;
@@ -59,7 +59,7 @@
     padding-top: 0px;
 }
 
-.inner-container .title:after {
+.ContainerAllCards .inner-container .title:after {
     content: "}";
     color: #ee6000;
     font-family: BankGothic Lt BT;
@@ -69,7 +69,7 @@
 
 /*-- Apenas um show!  Não toque neste codigo!*/
 
-#flip {
+.ContainerAllCards #flip {
     position: absolute;
     bottom: 0px;
     left: 50%;
@@ -85,7 +85,7 @@
     transition: opacity .3s;
 }
 
-#section06 a span {
+.ContainerAllCards #section06 a span {
     position: absolute;
     top: 0;
     left: 50%;
@@ -120,7 +120,7 @@
 
 /*----------------------------Global Seting--------------------------*/
 
-.bandSpec {
+.ContainerAllCards .bandSpec {
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
@@ -131,13 +131,13 @@
 }
 
 @media only screen and (min-width: 500px) {
-    .bandSpec {
+    .ContainerAllCards .bandSpec {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media only screen and (min-width: 850px) {
-    .bandSpec {
+    .ContainerAllCards .bandSpec {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
@@ -148,186 +148,53 @@
 
 /*----------------------Container Central!---------------------*/
 
-.container-cardsSpec {
+.ContainerAllCards .container-cardsSpec {
     background: rgb(0, 109, 199);
 }
 
 /*cardSpec pode ser removido, seria uma opcao!*/
 
-.title-cardSpec {
+.ContainerAllCards .title-cardSpec {
     align-content: center;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     color: #ffff;
 }
 
-.cardSpec {
-    background-image: linear-gradient(180deg, #505050, #505050, #505050, rgb(174, 28, 241));
-    text-decoration: none;
-    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.1);
+.ContainerAllCards .cardSpec {
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+    min-height: 70%;
+    text-decoration: none;
+    height: 30 0px;
+    background-image: linear-gradient(180deg, #505050, #505050, #505050, rgb(174, 28, 241));
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.1);
     align-content: center;
     text-align: center;
     position: relative;
+    border-radius: 40% 40% 10% 10%;
     transition: all 0.1s ease-in;
-    border-radius: 40% 40% 10% 10%
 }
 
-.cardSpec .thumbSpec {
+.ContainerAllCards .cardSpec .thumbSpec {
     padding-bottom: 3px;
     background-position: center;
     background-color: #505050;
     width: 100%;
     position: relative;
     left: 0%;
+    top: -20px;
     border: 2px solid;
     border-radius: 10% 10% 40% 40%
 }
 
-.cardSpec article {
+.ContainerAllCards .cardSpec article {
     padding: 20px;
     color: #fff;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-/*--------------------------------------------------------------*/
-
-/*----------------------Container inferior!---------------------*/
-
-/*--------------------------------------------------------------*/
-
-.container-cardsProject {
-    background: rgb(236, 236, 236);
-}
-
-.card-project {
-    background-image: linear-gradient(180deg, #505050, #505050, #505050, rgb(174, 28, 241));
-    text-decoration: none;
-    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    align-content: center;
-    text-align: center;
-    position: relative;
-    transition: all 0.1s ease-in;
-    border-radius: 40% 40% 10% 10%
-}
-
-.card-project .thumbProject {
-    padding-bottom: 3px;
-    background-position: center;
-    background-color: #505050;
-    width: 100%;
-    position: relative;
-    left: 0%;
-    border: 2px solid;
-    border-radius: 10% 10% 40% 40%
-}
-
-/* typography */
-
-.card-project h1 {
-    font-size: 20px;
-    margin: 0;
-    color: rgb(255, 255, 255);
-}
-
-.card-project p {
-    color: rgb(255, 255, 255);
-    flex: 1;
-    /* make p grow to fill available space*/
-    line-height: 2;
-}
-
-.card-project article {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.card-project span {
-    font-size: 12px;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    margin: 2em 0 0 0;
-}
-
-.title-card-project {
-    align-content: center;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 15px;
-    color: rgb(0, 0, 0);
-}
-
-.card-project:hover {
-    top: -10px;
-    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.2);
-}
-
-/*--------------------------------------------------------------*/
-
-/*--------------------Container Action buttons!-----------------*/
-
-/*--------------------------------------------------------------*/
-
-.actions {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-}
-
-.actions button {
-    padding: 10px;
-    margin-bottom: 25px;
-    border-radius: 5px;
-    border: 0;
-    background: #ee6000;
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.actions button[disabled] {
-    opacity: 0.5;
-    cursor: default;
-}
-
-.actions button:hover {
-    opacity: 0.7;
-}
-
-.actions button[disabled]:hover {
-    opacity: .2;
-    background: rgb(87, 87, 87);
-    color: #ffffff;
-    cursor: not-allowed;
-}
-
-.actions #btnPrev::before {
-    content: "<<< ";
-}
-
-.actions #btnNext::after {
-    content: " >>>";
-}
-
-#pageCount {
-    font-size: 18px;
-    font-weight: bold;
-    color: rgb(0, 0, 0);
-    letter-spacing: .05em;
-    margin: 10px;
 }
